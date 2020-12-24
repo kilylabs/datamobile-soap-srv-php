@@ -1,0 +1,29 @@
+{
+    "name": "kilylabs/datamobile-soap-srv-php",
+    "type": "library",
+    "description": "DataMobile PHP implementation of SOAP server for DataMobile application",
+    "keywords": ["datamobile"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {"Kily\\DM\\SOAP\\": "src/SOAP"}
+    },
+    "autoload-dev": {
+        "psr-4": {"Kily\\DM\\SOAP\\Tests\\": "tests/SOAP/Tests"}
+    },
+    "authors": [
+        {
+            "name": "Alexander Bogdanov",
+            "email": "ab@dev.kily.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "psr/log": "^1.0",
+        "electrolinux/phpquery": "^0.9.6",
+        "wa72/simplelogger": "^1.0",
+        "nategood/commando": "^0.2.8"
+    },
+    "require-dev": {
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4"
+    }
+}
