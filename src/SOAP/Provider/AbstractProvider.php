@@ -23,7 +23,7 @@ abstract class AbstractProvider
     abstract public function SOAP_ReopenDoc($SN, $UserName, $DocOutID);
     abstract public function SOAP_SetDocComment($SN, $UserName, $DocOutID, $Comment);
     abstract public function SOAP_SetDocNumber($SN, $UserName, $DocOutID, $Number);
-    abstract public function SOAP_WriteDoc($SN, $UserName, $DocHead, $DocRowsSelect, $DocRowsInsert);
+    abstract public function SOAP_WriteDoc($SN, $UserName, $DocHead, $DocRowsSelect, $DocRowsInsert, $Params);
     abstract public function SOAP_CreateDoc($SN, $UserName, $DocOutID, $TemplateID);
     abstract public function SOAP_GetArtRest($SN, $UserName, $ArtID, $Params);
     abstract public function SOAP_Login($SN, $UserName);
@@ -37,20 +37,20 @@ abstract class AbstractProvider
     abstract public function SOAP_DeleteArt($SN, $UserName, $Art);
     abstract public function SOAP_DeleteBarcode($SN, $UserName, $ArtID, $Barcode);
     abstract public function SOAP_OnCommitAutoInsertOnSelect($SN, $UserName, $Barcode, $DocOutID);
-    abstract public function SOAP_FastAccess($SN, $UserName, $Barcode);
+    abstract public function SOAP_FastAccess($SN, $UserName, $Barcode, $Params);
     abstract public function SOAP_CountDiscount($SN, $UserName, $Barcode, $DocOutID);
     abstract public function SOAP_GetBalance($SN, $UserName, $ArtID);
     abstract public function SOAP_Logout($SN, $UserName);
     abstract public function SOAP_GetPicture($ArtID);
-    abstract public function SOAP_OnPalletScan($SN, $UserName, $Barcode, $DocOutID, $Cell);
+    abstract public function SOAP_OnPalletScan($SN, $UserName, $Barcode, $DocOutID, $Cell, $Params);
     abstract public function SOAP_SetRowPhoto($SN, $UserName, $DocID, $ArtID, $Barcode, $Byte);
-    abstract public function SOAP_GenerateNewBC($SN, $UserName, $ArtID, $UnitID, $P1, $P2, $BarcodeQuant);
+    abstract public function SOAP_GenerateNewBC($SN, $UserName, $ArtID, $UnitID, $P1, $P2, $BarcodeQuant, $Params);
     abstract public function SOAP_GetArtCells($SN, $UserName, $DocID, $ArtID);
-    abstract public function SOAP_GetArtCellsSelect($SN, $UserName, $DocID, $ArtID);
-    abstract public function SOAP_FastAccessDoc($SN, $UserName, $DocID, $Barcode);
+    abstract public function SOAP_GetArtCellsSelect($SN, $UserName, $DocID, $ArtID, $Params);
+    abstract public function SOAP_FastAccessDoc($SN, $UserName, $DocID, $Barcode, $Params);
     abstract public function SOAP_GetUnits($SN, $UserName);
     abstract public function SOAP_SetDocPhoto($SN, $UserName, $DocID, $Byte);
-    abstract public function SOAP_SendArtToPrint($SN, $UserName, $ArtID, $Barcode, $Count);
+    abstract public function SOAP_SendArtToPrint($SN, $UserName, $ArtID, $Barcode, $Count, $Params);
     abstract public function SOAP_SendDocToPrint($SN, $UserName, $DocID);
     abstract public function SOAP_SendPackToPrint($SN, $UserName, $DocID, $Pack);
     abstract public function SOAP_GetDocArtsEgais($SN, $UserName, $DocID);
@@ -63,7 +63,7 @@ abstract class AbstractProvider
     abstract public function SOAP_CreateEgaisArt($SN, $UserName, $DMArt, $DMEgaisArt);
     abstract public function SOAP_OnDocScan($SN, $UserName, $Barcode, $TemplateID);
     abstract public function SOAP_GetArtAttributesName($SN, $UserName);
-    abstract public function SOAP_GetArtCellsInsert($SN, $UserName, $DocID, $ArtID);
+    abstract public function SOAP_GetArtCellsInsert($SN, $UserName, $DocID, $ArtID, $Params);
     abstract public function SOAP_GetNewGroupDocRows($SN, $UserName, $DocOutID);
     abstract public function SOAP_OnEgaisPalletScan($SN, $UserName, $Barcode, $DocOutID, $Cell);
     abstract public function SOAP_GetEgaisArts($SN, $UserName);
@@ -102,4 +102,6 @@ abstract class AbstractProvider
     abstract public function SOAP_SetDocCarantin_EGAIS($SN, $UserName, $DocOutID);
     abstract public function SOAP_OnDocScan_EGAIS($SN, $UserName, $Barcode);
     abstract public function SOAP_GetQtyInPack($Params);
+    abstract public function SOAP_GetSNTypes($Params);
+    abstract public function SOAP_GetSNList($Params);
 }
