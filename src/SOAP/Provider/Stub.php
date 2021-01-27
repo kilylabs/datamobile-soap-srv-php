@@ -101,7 +101,7 @@ class Stub extends AbstractProvider
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
 
-    public function SOAP_WriteDoc($SN, $UserName, $DocHead, $DocRowsSelect, $DocRowsInsert)
+    public function SOAP_WriteDoc($SN, $UserName, $DocHead, $DocRowsSelect, $DocRowsInsert, $Params)
     {
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
@@ -171,7 +171,7 @@ class Stub extends AbstractProvider
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
 
-    public function SOAP_FastAccess($SN, $UserName, $Barcode)
+    public function SOAP_FastAccess($SN, $UserName, $Barcode, $Params)
     {
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
@@ -196,7 +196,7 @@ class Stub extends AbstractProvider
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
 
-    public function SOAP_OnPalletScan($SN, $UserName, $Barcode, $DocOutID, $Cell)
+    public function SOAP_OnPalletScan($SN, $UserName, $Barcode, $DocOutID, $Cell, $Params)
     {
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
@@ -206,7 +206,7 @@ class Stub extends AbstractProvider
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
 
-    public function SOAP_GenerateNewBC($SN, $UserName, $ArtID, $UnitID, $P1, $P2, $BarcodeQuant)
+    public function SOAP_GenerateNewBC($SN, $UserName, $ArtID, $UnitID, $P1, $P2, $BarcodeQuant, $Params)
     {
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
@@ -216,12 +216,12 @@ class Stub extends AbstractProvider
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
 
-    public function SOAP_GetArtCellsSelect($SN, $UserName, $DocID, $ArtID)
+    public function SOAP_GetArtCellsSelect($SN, $UserName, $DocID, $ArtID, $Params)
     {
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
 
-    public function SOAP_FastAccessDoc($SN, $UserName, $DocID, $Barcode)
+    public function SOAP_FastAccessDoc($SN, $UserName, $DocID, $Barcode, $Params)
     {
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
@@ -236,7 +236,7 @@ class Stub extends AbstractProvider
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
 
-    public function SOAP_SendArtToPrint($SN, $UserName, $ArtID, $Barcode, $Count)
+    public function SOAP_SendArtToPrint($SN, $UserName, $ArtID, $Barcode, $Count, $Params)
     {
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
@@ -301,7 +301,7 @@ class Stub extends AbstractProvider
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
 
-    public function SOAP_GetArtCellsInsert($SN, $UserName, $DocID, $ArtID)
+    public function SOAP_GetArtCellsInsert($SN, $UserName, $DocID, $ArtID, $Params)
     {
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
@@ -492,6 +492,16 @@ class Stub extends AbstractProvider
     }
 
     public function SOAP_GetQtyInPack($Params)
+    {
+        throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
+    }
+
+    public function SOAP_GetSNTypes($Params)
+    {
+        throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
+    }
+
+    public function SOAP_GetSNList($Params)
     {
         throw new SoapFault("Sender", "Need to implement ".__METHOD__." method");
     }
