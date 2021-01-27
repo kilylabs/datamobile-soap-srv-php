@@ -142,7 +142,7 @@ class Dummy extends AbstractProvider
             'DMRest' => 1,//WSDL2.7
         );
 
-        return [ 'return' => $prods]; //WSDL2.7 
+        return [ 'return' => $prods]; //WSDL2.7
     }
 
     public function SOAP_GetTemplates($SN, $UserName)
@@ -681,17 +681,17 @@ class Dummy extends AbstractProvider
         ];
     }
 
-    public function SOAP_GetArtOnBC($SN,$UserName,$Barcode) //WSDL2.7
+    public function SOAP_GetArtOnBC($SN, $UserName, $Barcode) //WSDL2.7
     {
         return ['return' => $this->SOAP_GetNewArts($SN, $UserName)['return'][0]];
     }
 
-    public function SOAP_SendArtToPrint2($SN,$UserName,$ArtID,$Barcode,$Count,$QtyInt,$QtyFrac) //WSDL2.7
+    public function SOAP_SendArtToPrint2($SN, $UserName, $ArtID, $Barcode, $Count, $QtyInt, $QtyFrac) //WSDL2.7
     {
         return ['return' => true];
     }
 
-    public function SOAP_GetArtMarks($SN,$UserName) //WSDL2.7
+    public function SOAP_GetArtMarks($SN, $UserName) //WSDL2.7
     {
         $marks = [];
         return ['return' => $marks];
