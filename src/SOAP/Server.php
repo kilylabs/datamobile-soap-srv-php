@@ -40,6 +40,7 @@ class Server extends \SoapServer
         ob_start();
         $result = parent::handle($request);
         $response = ob_get_clean();
+        $response = str_replace(['<faultstring>','</faultstring'],['<faultstring><WSERRSTART>','</WSERRSTART></faultstring>'],$response);
 
         /* FIXME: we need to do some replacements to make response look like SOAP 1.2 response.
          * It is easier to modify v1.1 SoapServer request to make look like 1.2 rather that modify default 1.2 */
